@@ -27,21 +27,27 @@
       <a class="button button-icon icon ion-chatbubble" href="chat.html"></a>
   </div>
 
-    <ion-pane ng-controller="CardsCtrl">
 
+    <ion-pane ng-controller="CardsCtrl">
+      <div>
         <img src="img/user.png" id="center">
       </div>
-
+      <!--Localization-->
       <div class="list">
-        <a class="item item-icon-left" href="#">
+        <a class="item item-icon ion-navigate" href="#">
           Localização
         </a>
-
-        <a class="item item-icon-left" href="#">
-          <i class="icon ion-ios-toggle"></i>
-          Notificações
-        </a>
-
+        <!--Configuration-->
+        <li class="item item-toggle">
+             Mensagens
+             <label class="toggle">
+               <input type="checkbox">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+        </li>
+        <!--Mostrar TOGGLE-->
         <li class="item item-toggle">
              Mostrar no WorkApp
              <label class="toggle">
@@ -53,11 +59,15 @@
         </li>
 
       </div>
-
-      <button class="button button-full button-stable">
+      <!--Button Sair-->
+      <button class="button button-full button-stable ion-android-exit">
         Sair
       </button>
 
+      <button class="btn_deletar button button-full button-stable">
+        Deletar Conta
+      </button>
+      <!--Imagem Rodapé de Versão-->
       <div>
         <img class="img_rodape" src="img/chat.png">
           <p class="versao">Versão 0.0.1</p>

@@ -168,7 +168,7 @@ h1{
 }
 
 .button-stable{
-  top:130px;
+  top:50px;
 }
 .list{
   top:40px;
@@ -181,15 +181,18 @@ h1{
   height: 45px;
   width: 45px;
   position:absolute;
-  top:96%;
+  top:85%;
   left:83%;
   margin-top:-50px;
   margin-left:-140px;
 }
 .versao{
   position:absolute;
-  top:102%;
+  top:92%;
   left:79%;
   margin-top:-50px;
   margin-left:-140px;
+}
+.btn_deletar{
+  top: 120px;
 }
