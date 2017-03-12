@@ -13,11 +13,12 @@ angular.module('starter', ['ionic'])
 
 .controller('CardsCtrl', function($scope) {
     var cardTypes = [
-        { image: 'img/imagem4.png', title: 'So much grass #hippster'},
-        { image: 'img/imagem2.png', title: 'Way too much Sand, right?'},
-        { image: 'img/imagem6.jpg', title: 'André Luís, 24 anos'},
+        { image: 'img/ml.png', title: 'Magazine Luiza'},
+        { image: 'img/imagem2.png', title: 'Totvs'},
+        { image: 'img/imagem3.png', title: 'NovaHaus'},
     ];
 
+//Cards- escolha do empregado/emprego
     $scope.cards = [];
 
     $scope.addCard = function(i) {

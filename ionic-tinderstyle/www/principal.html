@@ -12,11 +12,23 @@
   <script src="cordova.js"></script>
   <script src="js/app.js"></script>
   <script src="lib/collide/collide.js"></script>
-  <script src="lib/ionic-contrib-tinder-cards/ionic.tdcards.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/directives.js"></script>
+  <link rel="stylesheet" href="css/animate.css">
   <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
+  <script>
+    $(function(){
+      $('button.btn_cancelar').on('click',function(){
+        $('ion-pane[name=box]').addClass('animated rotateOutUpLeft');
+      })
+    });
+
+    $(function(){
+      $('button.btn_check').on('click',function(){
+        $('ion-pane[name=box]').addClass('animated rotateOutUpRight');
+      })
+    });
+  </script>
 </head>
 <body ng-app="starter" no-scroll>
 
@@ -28,12 +40,13 @@
       <a class="button button-icon icon ion-chatbubble" href="chat.html"></a>
   </div>
 
-    <ion-pane ng-controller="CardsCtrl">
+    <ion-pane ng-controller="CardsCtrl" name="box" class="flip3D">
+      <div class="front">
         <td-cards>
             <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
             on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)"
             on-partial-swipe="cardPartialSwipe(amt)">
-                <div class="image">
+                <div class="image animated flipInX">
                     <div class="no-text overlayBox"><div class="noBox boxed">Trash</div></div>
                     <img ng-src="{{card.image}}">
                     <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Save</div></div>
@@ -44,10 +57,14 @@
                 </div>
             </td-card>
         </td-cards>
+    </div>
+     <div class="back">
+       <h1>Back</h1>
+     </div>
     </ion-pane>
 
     <div class="bar bar-footer bar-light">
-      <button class="button button-clear"style="top:-14px;left:60px;">
+      <button class="button btn_cancelar button-clear"style="top:-14px;left:60px;">
         <img class="cancelar" src="img/btn_cancelar.png">
       </button>
     <div class="title">
@@ -55,7 +72,7 @@
         <img class="info" src="img/btn_info.png">
       </button>
     </div>
-    <button class="button button-clear" style="top:-8px;right:60px;">
+    <button class="button btn_check button-clear" style="top:-8px;right:60px;">
       <img class="check" src="img/btn_checkado.png">
     </button>
   </div>
