@@ -11,6 +11,7 @@ angular.module('starter', ['ionic'])
     }
 })
 
+
 .controller('CardsCtrl', function($scope) {
     var cardTypes = [
         { image: 'img/ml.png', title: 'Magazine Luiza'},

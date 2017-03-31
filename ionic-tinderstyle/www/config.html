@@ -60,7 +60,8 @@
 
       </div>
       <!--Button Sair-->
-      <button class="button button-full button-balanced ion-android-exit">
+      <ion-content ng-controller="AppCtrl" class="padding">
+      <button class="button button-full button-balanced ion-android-exit" ng-click="showConfirm()">
         Sair
       </button>
 
@@ -68,6 +69,7 @@
       <button class="btn_deletar button button-full button-assertive">
         Deletar Conta
       </button>
+      </ion-content>
       <!--Imagem Rodapé de Versão-->
       <div>
         <img class="img_rodape" src="img/chat.png">
