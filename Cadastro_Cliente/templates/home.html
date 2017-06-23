@@ -1,0 +1,79 @@
+<div ng-include="'templates/_nav.html'"></div>
+<main class="container">
+	<div class="row">
+		<br>
+		<input type="text" ng-model="busca" placeholder="Busca">
+
+	</div>
+	<div class="row">
+		<table class="striped">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>CPF</th>
+					<th>E-mail</th>
+					<th>Cidade</th>
+					<th>Estado</th>
+					<th>Ação</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="cliente in clientes | filter:busca">
+					<td>{{cliente.nome}}</td>
+					<td>{{cliente.cpf}}</td>
+					<td>{{cliente.email}}</td>
+					<td>{{cliente.cidade}}</td>
+					<td>{{cliente.estado}}</td>
+					<td>
+						<button ng-click="editarCliente(cliente)" class="btn blue">Editar</button>
+						<button ng-click="deletarCliente(cliente)" class="btn red">Deletar</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="row">
+		<!-- Modal Trigger -->
+  		<a ng-click="abreAddCliente()" class="waves-effect waves-light btn">Adicionar</a>
+	</div>
+</main>
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4 ng-if="!editando">Adicionar Cliente</h4>
+      <h4 ng-if="editando">Editar Cliente</h4>
+      <p>Preencha os dados do Cliente</p>
+      <div class="row">
+      	<div class="input-field col m6 s12">
+          <input type="text" ng-model="Cliente.nome" class="validate" placeholder="Nome">
+
+        </div>
+
+        <div class="input-field col m6 s12">
+          <input type="text" ng-model="Cliente.cpf" class="validate" placeholder="CPF">
+
+        </div>
+        <div class="input-field col m4 s12">
+          <input type="text" ng-model="Cliente.email" class="validate" placeholder="Email">
+
+        </div>
+        <div class="input-field col m4 s12">
+          <input type="text" ng-model="Cliente.cidade" class="validate" placeholder="Cidade">
+
+        </div>
+        <div class="input-field col m4 s12">
+          <input type="text" ng-model="Cliente.estado" class="validate" placeholder="Estado>
+
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+    	<a ng-if="!editando" ng-click="addCliente(Cliente)" class="waves-effect waves-light btn blue">Adicionar</a>
+    	<a ng-if="editando" ng-click="salvarCliente(Cliente)" class="waves-effect waves-light btn blue">Salvar</a>
+      	<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Cancelar</a>
+
+    </div>
+  </div>
