@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Notícias
+    </ion-title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="assets/images/avatar.png">
+    </ion-avatar>
+    <h2>{{ objeto_noticia.titulo }}</h2>
+    <p class="feed_date">{{objeto_noticia.data}}</p>
+  </ion-item>
+
+  <img src="assets/images/imagem3.png">
+
+  <ion-card-content>
+    <p>{{objeto_noticia.descricao}}</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{objeto_noticia.qtd_likes}}</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        {{objeto_noticia.time_comment}}
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+  <button ion-button class="btn-comprido btn-xl" outline><i class="glyphicon glyphicon-thumbs-up"></i><h4>Curtir</h4></button>
+   <button ion-button class="btn-comprido btn-xl" outline><i class="glyphicon glyphicon-share-alt"></i><h4>Compartilhar</h4></button>
+</ion-card>
+
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sugestões</ion-title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script>
+    $(function(){
+      $('button.btn_cancelar').on('click',function(){
+        $('ion-pane[name=box]').addClass('animated rotateOutUpLeft');
+      })
+    });
+
+    $(function(){
+      $('button.btn_check').on('click',function(){
+        $('ion-card[name=box]').addClass('animated rotateOutUpRight');
+      })
+    });
+    </script>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card name="box">
+
+  <img src="assets/images/imagem3.png">
+  <h1>{{ objeto_vaga.titulo }}</h1>
+
+  <ion-card-content>
+    <h5>{{objeto_vaga.descricao}}</h5>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col center text-center>
+      <ion-note>
+        {{objeto_vaga.time_comment}}
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+    <div class="back">
+
+    </div>
+</ion-card>
+<div bar bar-light class="botoes">
+
+  <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="glyphicon glyphicon-thumbs-down"></i></button>
+
+	<button ion-button color="light" clear>
+		<img class="info" src="assets/images/btn_info.png">
+	</button>
+
+	<button type="button" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-thumbs-up"></i></button>
+</div>
+</ion-content>
