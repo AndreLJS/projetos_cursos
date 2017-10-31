@@ -1,0 +1,157 @@
+@mixin flex{
+  display: flex;
+}
+@mixin flex-center{
+  justify-content: center;
+}
+@mixin block{
+  display: inline-block;
+}
+@mixin center{
+  text-align: center;
+}
+@mixin color{
+  background: #00413d;
+}
+@mixin fixed{
+  position: fixed;
+}
+@mixin flex_{
+  flex: 1;
+}
+@mixin paddind_flex{
+  padding: 0 5px;
+}
+
+@mixin imagem{
+  display: block;
+  max-width: 100%;
+  margin: 60% auto;
+}
+
+@mixin fonts{
+  font-family: arial;
+  font-size:15px;
+  font-weight:100;
+}
+
+  .testing{
+    @include flex;
+    width: percentage(5/7);
+  }
+
+  body{
+    @include color;
+  }
+
+  img {
+      @include imagem;
+  }
+
+  #menu-trigger {
+    @include fixed;
+    width: 90px;
+    height: 90px;
+    top: 10px;
+    margin-left:10px;
+    left: 0;
+    cursor: pointer;
+  }
+
+  .header__menu div {
+      width: 30px;
+      height: 4px;
+      background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+      margin-top: 3px;
+    }
+
+    #header-hidde{
+      @include fixed;
+      left: -200px;
+      top:60px;
+      width: 200px;
+      height: 800px;
+      background: white;
+      transition: left 0.3s linear;
+    }
+
+    header{
+      @include flex;
+      @include center;
+      @include fixed;
+      left:0;
+      right:0;
+      top:0;
+      height:45px;
+      justify-content:space-between;
+      font-size:1.5rem;
+      color:white;
+
+    .header__menu{
+        @include flex_;
+        max-width: 45px;
+        cursor: pointer;
+    }
+    .header__menu svg{
+      width:25px;
+      fill:white;
+    }
+    .btn:focus, .btn::-moz-focus-inner{
+      outline:none;
+      border:none;
+    }
+    .btn{
+      @include block;
+      @include fonts;
+      text-transform:uppercase;
+      text-decoration: none;
+      border-radius: 6px;
+      padding:15px;
+      cursor: pointer;
+    }
+    .btn-green{
+      background: #7fbf3b;
+      color:#fff;
+      box-shadow:0 7px 0 #7fbf3b;
+    }
+
+    .btn-green:active{
+      position:relative;
+      top:2px;
+      box-shadow:none;
+    }
+    .center {
+      @include center;
+    }
+
+    /* Flex Container */
+    .container {
+      @include flex;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .item {
+      @include center;
+      @include flex_;
+      margin: 5px;
+      padding: 0 5px;
+      font-size: 1.5em;
+    }
+
+    .item {
+      @include center;
+      @include flex_;
+      @include paddind_flex;
+      margin-top: -60px;;
+      font-size: 1.5em;
+    }
+    .item_center{
+      margin-top: -125px;
+    }
+    input[type="text"],input[type="password"]{
+      height: 20px;
+      margin-top: 3px;
+      border-radius:7px;
+    }
+  }

@@ -1,0 +1,99 @@
+.testing {
+  display: flex;
+  width: 71.42857%; }
+
+body {
+  background: #00413d; }
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 60% auto; }
+
+#menu-trigger {
+  position: fixed;
+  width: 90px;
+  height: 90px;
+  top: 10px;
+  margin-left: 10px;
+  left: 0;
+  cursor: pointer; }
+
+.header {
+  /* Flex Container */ }
+  .header__menu div {
+    width: 30px;
+    height: 4px;
+    background: white none repeat scroll 0% 0%;
+    margin-top: 3px; }
+  .header #header-hidde {
+    position: fixed;
+    left: -200px;
+    top: 60px;
+    width: 200px;
+    height: 800px;
+    background: white;
+    transition: left 0.3s linear; }
+  .header header {
+    display: flex;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 45px;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: white; }
+  .header .header__menu {
+    flex: 1;
+    max-width: 45px;
+    cursor: pointer; }
+  .header .header__menu svg {
+    width: 25px;
+    fill: white; }
+  .header .btn:focus, .header .btn::-moz-focus-inner {
+    outline: none;
+    border: none; }
+  .header .btn {
+    display: inline-block;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 15px;
+    cursor: pointer; }
+  .header .btn-green {
+    background: #7fbf3b;
+    color: #fff;
+    box-shadow: 0 7px 0 #7fbf3b; }
+  .header .btn-green:active {
+    position: relative;
+    top: 2px;
+    box-shadow: none; }
+  .header .center {
+    text-align: center; }
+  .header .container {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto; }
+  .header .item {
+    text-align: center;
+    flex: 1;
+    margin: 5px;
+    padding: 0 5px;
+    font-size: 1.5em; }
+  .header .item {
+    text-align: center;
+    flex: 1;
+    padding: 0 5px;
+    margin-top: -60px;
+    font-size: 1.5em; }
+  .header .item_center {
+    margin-top: -125px; }
+  .header input[type="text"], .header input[type="password"] {
+    height: 20px;
+    margin-top: 3px;
+    border-radius: 7px; }

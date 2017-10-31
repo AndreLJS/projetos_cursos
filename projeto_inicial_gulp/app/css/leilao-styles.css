@@ -1,0 +1,107 @@
+body {
+  background: #F5FFFA;
+  background-attachment: fixed; }
+
+img {
+  display: block;
+  max-width: 190px;
+  margin: -3% auto; }
+
+nav.header__navbar {
+  position: fixed;
+  border-radius: 6px;
+  width: 100%;
+  padding: 16px 0px;
+  background: #00413d; }
+
+#menu-trigger {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  top: 107px;
+  margin-left: 10px;
+  left: 0;
+  cursor: pointer; }
+
+.header__menu div {
+  width: 30px;
+  height: 4px;
+  background: white none repeat scroll 0% 0%;
+  margin-top: 2px; }
+
+#header-hidde {
+  position: fixed;
+  left: -200px;
+  top: 63px;
+  width: 200px;
+  height: 800px;
+  border-radius: 4px;
+  background: linear-gradient(50deg, #00413d, #228B22);
+  transition: left 0.3s linear; }
+
+header {
+  position: fixed;
+  display: flex;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: -90px;
+  height: 45px;
+  justify-content: space-between;
+  color: white; }
+
+.header__menu {
+  flex: 1;
+  max-width: 45px;
+  cursor: pointer; }
+
+.header__menu svg {
+  width: 25px;
+  fill: white; }
+
+.card__container--img {
+  max-width: 304px;
+  border-radius: 6px; }
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+  transition: 0.3s;
+  border-radius: 6px;
+  margin-top: 95px; }
+
+.card__container--2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+  transition: 0.3s;
+  border-radius: 6px;
+  margin-top: 20px; }
+
+/* Add some padding inside the card container */
+.card__container {
+  padding: 2px 16px; }
+
+.btn__img {
+  width: 100%;
+  border: 0; }
+
+.center {
+  align-items: center; }
+
+.btn__card {
+  width: 60px;
+  height: 50px;
+  border-radius: 60px;
+  border: none;
+  background-color: transparent;
+  margin-left: 150px; }
+
+.btn__card:active {
+  position: relative;
+  top: 20px;
+  box-shadow: none; }
+
+a {
+  display: block; }
+
+h4, h3 {
+  text-align: center; }
